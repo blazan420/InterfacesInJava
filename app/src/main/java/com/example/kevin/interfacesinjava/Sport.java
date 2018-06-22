@@ -1,6 +1,6 @@
 package com.example.kevin.interfacesinjava;
 
-public abstract class Sport implements LifeInsurance {
+public abstract class Sport extends Object implements LifeInsurance {
 
     // Instance variables
     private String name;
@@ -21,6 +21,51 @@ public abstract class Sport implements LifeInsurance {
     }
 
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getRules() {
+        return rules;
+    }
+
+    public void setRules(String rules) {
+        this.rules = rules;
+    }
+
+    public String getUniform() {
+        return uniform;
+    }
+
+    public void setUniform(String uniform) {
+        this.uniform = uniform;
+    }
+
+    public int getSpeedRequired() {
+        return speedRequired;
+    }
+
+    public void setSpeedRequired(int speedRequired) {
+        this.speedRequired = speedRequired;
+    }
+
+    public int getPowerRequired() {
+        return powerRequired;
+    }
+
+    public void setPowerRequired(int powerRequired) {
+        this.powerRequired = powerRequired;
+    }
+
+    @Override
+    public String toString() {
+
+        return String.format("%s: %s%n%s: %s%n%s: %s%n%s: %d%n%s: %d", "Name", getName(), "Rules",
+                getRules(), "Uniform", getUniform(), "Speed Required", getSpeedRequired(),
+                "Power Required", getPowerRequired());
+    }
 }
