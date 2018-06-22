@@ -46,4 +46,11 @@ public class Student implements LifeInsurance{
         return  getCostOfInsurance();
 
     }
+
+    @Override
+    public String toString() {
+
+        return String.format("%s: %s%n%s: %s", "Name", getName(), "Course Name", getCourseName());
+
+    }
 }
